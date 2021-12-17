@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="app.eventmanagementsystem.pojo.User" table="usertable">
+        
+        <id name="userid" column="userid" type="long">
+            <generator class="native" />
+        </id>
+        
+        <property name="username" column="username" type="string" />
+        
+        <property name="emailid" column="emailid" type="string" />
+        
+        <property name="password" column="password" type="string" />
+        
+    </class>
+</hibernate-mapping>

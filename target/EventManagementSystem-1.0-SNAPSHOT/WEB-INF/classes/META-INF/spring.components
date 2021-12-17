@@ -1,0 +1,12 @@
+app.eventmanagementsystem.controller.EventController=org.springframework.stereotype.Component
+app.eventmanagementsystem.controller.HomePageController=org.springframework.stereotype.Component
+app.eventmanagementsystem.controller.LoginController=org.springframework.stereotype.Component
+app.eventmanagementsystem.controller.OrganizerController=org.springframework.stereotype.Component
+app.eventmanagementsystem.controller.OwnerController=org.springframework.stereotype.Component
+app.eventmanagementsystem.controller.UserController=org.springframework.stereotype.Component
+app.eventmanagementsystem.controller.VenueController=org.springframework.stereotype.Component
+app.eventmanagementsystem.pojo.Event=javax.persistence.Entity,javax.persistence.Table
+app.eventmanagementsystem.pojo.Organizer=javax.persistence.Entity,javax.persistence.Table
+app.eventmanagementsystem.pojo.Owner=javax.persistence.Entity,javax.persistence.Table
+app.eventmanagementsystem.pojo.User=javax.persistence.Entity,javax.persistence.Table
+app.eventmanagementsystem.pojo.Venue=javax.persistence.Entity,javax.persistence.Table

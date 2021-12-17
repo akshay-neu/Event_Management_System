@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="app.eventmanagementsystem.pojo.Event" table="eventtable">
+        
+        <id name="eventid" column="eventid" type="long">
+            <generator class="native" />
+        </id>
+        
+        <property name="eventname" column="eventname" type="string" />
+        <property name="details" column="details" type="string" />
+        <property name="status" column="status" type="string" />
+        <property name="seats_available" column="seats_available" type="long" />
+        
+    <many-to-one class="app.eventmanagementsystem.pojo.Venue" column="venue" foreign-key="fk_event_venue" name="venue" not-null="true"/>
+    <many-to-one class="app.eventmanagementsystem.pojo.Organizer" column="organizer" foreign-key="fk_event_organizer" name="organizer" not-null="true"/>
+    
+    <set name="user" table="link_event_user">
+        <key column="eventid" foreign-key="fk_user_event" />
+        <element type="User" column="userid" not-null="true"> </element>
+    </set>
+        
+        
+    </class>
+</hibernate-mapping>

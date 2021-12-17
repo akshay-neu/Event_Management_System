@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+
+    <!--bean id="propertyConfigurer"
+    class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
+    p:location="/WEB-INF/jdbc.properties" />
+
+<bean id="dataSource"
+    class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+    p:driverClassName="${jdbc.driverClassName}"
+    p:url="${jdbc.url}"
+    p:username="${jdbc.username}"
+    p:password="${jdbc.password}" /-->
+
+    <!-- ADD PERSISTENCE SUPPORT HERE (jpa, hibernate, etc) -->
+ <bean id="eventdao" class="app.eventmanagementsystem.dao.EventDAO" scope="request" /> 
+ <bean id="event" class="app.eventmanagementsystem.pojo.Event" scope="request" />
+ 
+ <bean id="ownerdao" class="app.eventmanagementsystem.dao.OwnerDAO" scope="request" /> 
+ <bean id="owner" class="app.eventmanagementsystem.pojo.Owner" scope="request" />
+ 
+ <bean id="userdao" class="app.eventmanagementsystem.dao.UserDAO" scope="request" /> 
+ <bean id="user" class="app.eventmanagementsystem.pojo.User" scope="request" />
+ 
+ <bean id="venuedao" class="app.eventmanagementsystem.dao.VenueDAO" scope="request" /> 
+ <bean id="venue" class="app.eventmanagementsystem.pojo.Venue" scope="request" />
+ 
+ <bean id="organizerdao" class="app.eventmanagementsystem.dao.OrganizerDAO" scope="request" /> 
+ <bean id="organizer" class="app.eventmanagementsystem.pojo.Organizer" scope="request" />
+
+  <bean id="home" class="app.eventmanagementsystem.pojo.Home" scope="request" />
+ 
+</beans>
